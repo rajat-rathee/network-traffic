@@ -1,7 +1,15 @@
 import subprocess
+from subprocess import Popen, PIPE
 import re
 
 def scan_network():
+	#sudo bypass
+	sudo_password = 'placeholder' #enter sudo password here
+	command = '-'
+	command = command.split()
+	cmd1 = subprocess.Popen(['echo',sudo_password], stdout=subprocess.PIPE)
+	cmd2 = subprocess.Popen(['sudo','-S'] + command, stdin=cmd1.stdout, stdout=subprocess.PIPE)
+
 	command = ['sudo', 'arp-scan' ,'-l','-r','5']
 	new_list = []
 	users_mac = []
