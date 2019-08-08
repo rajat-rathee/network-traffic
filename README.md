@@ -1,6 +1,6 @@
 # Network Traffic Tracker
 Track added members on your network with scans. View history of all scans ran and pull 
-specific information of who was on the network during each scan. There is also a scheduler feature
+specific information of who was on the network during each scan. Scheduler feature
 where you can automatically run scans every 30 minutes.
 
 Built using: Python, Flask, SQLite3, SQLAlchemy 
