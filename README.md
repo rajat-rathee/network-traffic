@@ -3,7 +3,7 @@ Track added members on your network with scans. View history of all scans ran an
 specific information of who was on the network during each scan. Scheduler feature
 where you can automatically run scans every 30 minutes.
 
-Built using: Python, Flask, SQLite3, SQLAlchemy 
+Built using: Python, Flask, SQLite3, SQLAlchemy, HTML
 
 ## Setting Up
 
