@@ -36,3 +36,5 @@ python3
 ```bash
 python3 run.py
 ``` 
+2. Go to http://0.0.0.0:80/ in a browser.
+3. Ready to use!
