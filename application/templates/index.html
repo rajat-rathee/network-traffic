@@ -1,5 +1,10 @@
 <html>
 <body>
-    <h2>Currently {{ var }} people are on your network.</h2>
+    <h1>Currently {{ num }} members are on your network.</h1>
+
+    <h2>Current Members:</h2>
+    {% for user in people %}
+      <h3>{{user[3]}}</h3>
+    {% endfor %}
 </body>
 </html>
