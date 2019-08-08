@@ -22,10 +22,18 @@ pip install flask_restful
 pip install flask_sqlalchemy
 pip install subprocess
 ``` 
-2.
+2. Create the databse
+```bash
+cd application/
+python3
+from app import db
+db.create_all()
+exit()
+``` 
 
-## Using the Extension
+## Using the App
 
-1. Click on the Southwest logo on your Chrome toolbar.
-2. Enter the information asked for in the pop-up.
-3. Click submit and your flight will be checked-in for you.
+1. Run the run.py file
+```bash
+python3 run.py
+``` 
