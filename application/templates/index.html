@@ -6,5 +6,9 @@
     {% for user in people %}
       <h3>{{user[3]}}</h3>
     {% endfor %}
+
+    <form action="//0.0.0.0:80/data" method="POST">
+    	<input type="submit" name="View Data" value="View Previous Data"/>
+	</form>
 </body>
 </html>
