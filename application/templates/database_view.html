@@ -4,7 +4,7 @@
     <form action="//0.0.0.0:80/" method="POST">
     	<input type="submit" name="RunScan" value="Run Scan Again!"/>
 	</form>
-	
+
     <h2> Pick a Date </h2>
     {% for date in dates %}
       <a href={{url_for('date', uid = date[1]) }}> {{date[0]}} <br> </a>

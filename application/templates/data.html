@@ -1,6 +1,13 @@
 <html>
 <body>
-    <h1>Data View from {{date}}</h1>
-    
+    <h1>Data view from {{date}}</h1>
+    <h3>This scan had {{scan_results[0].num}} members on the newtork at that time.</h3>
+    <h2>Members Present:</h2>
+    {% for user in devices %}
+      <h3>Name: {{user.name}} &nbsp;&nbsp; MAC Address: {{user.mac_address}} &nbsp;&nbsp; Device Manufacturer: {{user.manufacturer}}</h3>
+    {% endfor %}
+    <form action="//0.0.0.0:80/data" method="POST">
+    	<input type="submit" name="back" value="Back"/>
+	</form>
 </body>
 </html>
