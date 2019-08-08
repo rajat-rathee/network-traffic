@@ -9,7 +9,7 @@ def scan_network():
 	command = '-'
 	command = command.split()
 	cmd1 = subprocess.Popen(['echo',sudo_password], stdout=subprocess.PIPE)
-	cmd2 = subprocess.Popen(['sudo','-S'] + command, stdin=cmd1.stdout, stdout=subprocess.PIPE)
+	cmd2 = subprocess.Popen(['sudo','-s'] + command, stdin=cmd1.stdout, stdout=subprocess.PIPE)
 
 	current_time = time.time()
 
@@ -20,7 +20,6 @@ def scan_network():
 	valid_names = ['John', 'Jane', 'Mary', 'Andy']
 
 	out = subprocess.check_output(command).decode('utf-8')
-	#regex_mac = re.compile(ur'(?:[0-9a-fA-F]:?){12}')
 	regex_mac = re.compile('\s+((?:[0-9A-Fa-f]{2}:){5}(?:[0-9A-Fa-f]){2})\s+')
 	mac_list = re.findall(regex_mac, out)
 
