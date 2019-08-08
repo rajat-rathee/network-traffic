@@ -4,14 +4,13 @@ import re
 import time
 
 def scan_network():
-	'''
 	#sudo bypass
 	sudo_password = 'placeholder' #sudo password here
 	command = '-'
 	command = command.split()
 	cmd1 = subprocess.Popen(['echo',sudo_password], stdout=subprocess.PIPE)
 	cmd2 = subprocess.Popen(['sudo','-S'] + command, stdin=cmd1.stdout, stdout=subprocess.PIPE)
-	'''
+
 	current_time = time.time()
 
 	command = ['sudo', 'arp-scan' ,'-l','-r','5']

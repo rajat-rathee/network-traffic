@@ -33,7 +33,21 @@ def index():
 		db.session.add(d)
 		db.session.commit()
 	return render_template('index.html', num = num_people, people = info_list)
-
+#schedule scan route
+@app.route("/schedule", methods = ["GET", "POST"])
+def schedule():
+	info_list = netscan.scan_network()
+	num_people = len(info_list)
+	#add scan into database
+	s = Scan(id_date = info_list[0][2], num = num_people, time_int = int(info_list[0][2]))
+	db.session.add(s)
+	db.session.commit()
+	#add data into database
+	for x in info_list:
+		d = Device (id_num = time.time(), mac_address = x[0], time_stamp = x[2], manufacturer = x[1], name = x[3], time_int = int(x[2]))
+		db.session.add(d)
+		db.session.commit()
+	return render_template('schedule.html', num = num_people, people = info_list)
 #data viewing route
 @app.route("/data", methods=["GET","POST"])
 def data():
