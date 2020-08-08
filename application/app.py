@@ -1,5 +1,4 @@
 import netscan
-import scheduler
 
 import sqlite3
 from flask import Flask, g, render_template, jsonify, request
